@@ -4,8 +4,28 @@
     font-family: 'Source Code Pro', monospace;
 }
 
-.topNav > ul {
+.top {
+    position: sticky;
+    top: 0;
+    height: 10vh;
+    width: 100%;
+    display: grid;
+    grid-template: 1fr / repeat(12, 1fr);
     align-items: center;
+    background-color: whitesmoke;
+    box-shadow: 0  1px 1px 1px rgba(0,0,0,0.2);
+    z-index: 4;
+}
+
+.logo {
+    grid-column: 1 / span 2;
+    justify-self: center;
+}
+
+
+.topNav {
+    grid-column: 3 / span 3;
+    justify-self: center;
 }
 
 
@@ -13,18 +33,56 @@
     display: inline;
 }
 
-.top {
-    position: sticky;
-    top: 0;
-    height: 10vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.theme-button {
+    grid-column: 11 / span 2;
+    display: inline-flex;
     align-items: center;
-    background-color: whitesmoke;
-    box-shadow: 0  1px 1px 1px rgba(0,0,0,0.2);
-    z-index: 4;
 }
+
+/* for theme switch button */
+
+.switch {
+    margin: 0 5px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    height: 30px;
+    width: 60px;
+    background-color: white;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.slider:before{
+    position: absolute;
+    content: "";
+    background-color: rgb(45, 42, 85);
+    top: 1px;
+    height: 28px;
+    width: 28px;
+    border-radius: 50px;
+    transition: 0.4s; /*to make the animation smoother*/
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+    background-color: rgb(255, 211, 153);
+}
+
+
+input:checked + .slider {
+    background-color: rgb(40, 40, 90);
+    z-index: 6;
+}
+
+/* Hero */
 
 .hero{
     width: 100%;
@@ -32,14 +90,7 @@
     background-color: skyblue;
     z-index: 1;
     display: grid;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-text {
-    position: absolute;
-    color: whitesmoke;
-    z-index: 3;
+    grid-template: repeat(6, 1fr) / repeat(12, 1fr);
 }
 
 .herobg {
@@ -48,19 +99,53 @@
     height: inherit;
 }
 
+/* Background animation */
+
 .herobg.left {
     background: linear-gradient(60deg, slateblue, rgb(255, 0, 0, 0) 60%);
-    z-index: 2;
-    animation: bgFadeIn 2s ease-in forwards;
+    animation: FadeIn 3s ease-in 0.5s forwards;
 }
 
 .herobg.right {
     background: linear-gradient(230deg, rgb(205, 90, 171), rgb(0, 0, 255, 0) 60%);
-    z-index: 2;
-    animation: bgFadeIn 2s ease-in forwards;
+    animation: FadeIn 3s ease-in 0.5s forwards;
 }
 
-@keyframes bgFadeIn {
+.pfp {
+    grid-area: 2 / 2 / span 2 / span 2;
+    z-index: 5;
+}
+
+.profilepic {
+    height: 200px;
+    width: 200px;
+    background-color: darkgray;
+    border-radius: 50%;
+    animation: FadeIn 1s ease-in 0s forwards;
+    
+}
+
+.nametag {
+    grid-area: 2 / 4 / 3 / 7;
+    background-color: whitesmoke;
+    padding: 20px 35px;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    animation: moveFromRight 1s linear 0.2s forwards;
+
+}
+
+.hero-text {
+    grid-area: 3 / 3 / 5 / span 8;
+    color: whitesmoke;
+    z-index: 3;
+    padding: 20px;
+}
+
+
+@keyframes FadeIn {
     0%{
         opacity: 0;
     }
@@ -68,4 +153,27 @@
     100%{
         opacity: 1;
     }
+}
+
+@keyframes moveFromRight {
+    0%{
+        opacity: 0;
+        transform: translateX(30%);
+    }
+
+    50%{
+        opacity: 0;
+        transform: translateX(20%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+/*Responsive design*/
+
+@media screen and (max-width: 800px){
+
 }
