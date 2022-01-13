@@ -6,7 +6,7 @@
             <style>
                 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
             </style>
-            <script src="resources/js/main.js" defer></script>
+            <script src="../resources/js/main.js" defer></script>
             <script src="https://kit.fontawesome.com/0d19e31c05.js" crossorigin="anonymous"></script>
         </head>
         <body>
@@ -22,6 +22,15 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
+                <button class='mobile-burger'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+                </button>
+                <nav class='mobileNav'>
+                        <a href="index.html">Home</a>
+                        <a href="index.html#projects">Projects</a>
+                        <a href="index.html#skills">Skills</a>
+                        <a href="contact/contact.html">Contact</a>
+                    </ul>
+                </nav>
                 <div class="theme-button">
                     <p>dark mode</p>
                     <label class="switch">
@@ -31,14 +40,17 @@
                 </div>
             </header>
             <main>
-                <section>
+                <section class='contact-info'>
                     <h2>Contact</h2>
-                    <p>If you would like to reach out to me for jobs, you can contact me via the following platforms:</p>
+                    <p>If you would like to reach out to me for jobs, <br>
+                        or you would like to contact me, <br>
+                        you can contact me via the following platforms:</p>
+                    <h3>Email:</h3>
+                    <address>foo@bar.com</address>
+                    <h3>Github:</h3>
+                    <address><a href="#">github.com/example</a></address>
                 </section>
-                <h2>Email:</h2>
-                <address>foo@bar.com</address>
-                <h2>Github:</h2>
-                <address><a href="#">github.com/example</a></address>
+               
             </main>
         </body>
     </html>

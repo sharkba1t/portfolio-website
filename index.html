@@ -1,3 +1,7 @@
+<!--
+Font Awesome Free 5.3.1 by @fontawesome - https://fontawesome.com
+License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+-->
 <!DOCTYPE html>
     <html>
         <head>
@@ -22,6 +26,15 @@
                         <li><a href="contact/contact.html">Contact</a></li>
                     </ul>
                 </nav>
+                <button class='mobile-burger'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+                </button>
+                <nav class='mobileNav'>
+                        <a href="index.html">Home</a>
+                        <a href="index.html#projects">Projects</a>
+                        <a href="index.html#skills">Skills</a>
+                        <a href="contact/contact.html">Contact</a>
+                    </ul>
+                </nav>
                 <div class="theme-button">
                     <p>dark mode</p>
                     <label class="switch">
@@ -37,26 +50,53 @@
                         <div class='profilepic'></div>
                     </figure>
                     <h2 class="nametag">First Last</h2>
-                    <p class='hero-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed enim ut sem viverra aliquet eget. Bibendum est ultricies integer quis. Id donec ultrices tincidunt arcu non sodales. Vestibulum mattis ullamcorper velit sed. Platea dictumst vestibulum rhoncus est. Justo eget magna fermentum iaculis eu non. Molestie at elementum eu facilisis sed odio morbi quis commodo. Eget nullam non nisi est sit amet. Ornare arcu odio ut sem nulla pharetra diam sit. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Ultrices sagittis orci a scelerisque purus semper eget. Amet nisl purus in mollis. Mollis nunc sed id semper risus in hendrerit. Gravida rutrum quisque non tellus. Ut porttitor leo a diam sollicitudin tempor id. Odio eu feugiat pretium nibh ipsum.</p>
+                    <p class='hero-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed enim ut sem viverra aliquet eget. Bibendum est ultricies integer quis. Id donec ultrices tincidunt arcu non sodales. </p>
                     <div class="herobg left" role="presentation"></div>
                     <div class="herobg right" role="presentation"></div>
                 </div>
                 <div class='projects'>
-                    <h2 class="section-title">Projects</h2>
+                    <h2 class="section-title" id='projects'>Projects</h2>
                     <div class="showcase">
                         <div class='showcase-top'>
                             <h3>Showcase</h3>
                         </div>
-                        <button class='tab tab1' onclick="showProject(1)">Project 1</button>
-                        <button class='tab tab2' onclick="showProject(2)">Project 2</button>
-                        <button class='tab tab3' onclick="showProject(3)">Project 3</button>
+                        <div class='project-tabs'>
+                            <button class='tab tab1' onclick="showProject(1)">Project 1</button>
+                            <button class='tab tab2' onclick="showProject(2)">Project 2</button>
+                            <button class='tab tab3' onclick="showProject(3)">Project 3</button>
+                        </div>
                         <div class='mainDisplay'>
-                            <p>click on a tab to see the projects</p>
+                            <p id='default-text'>click on a tab to see the projects</p>
+                            <div class="project-box project1">
+                                <figure>
+                                    <img src="resources/img/chris-ried.jpg">
+                                    <figcaption>Photo by <a href="https://unsplash.com/@florianolv?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Florian Olivo</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
+                                </figure>
+                                <h4>Project 1</h4>
+                                <p>Vestibulum mattis ullamcorper velit sed. Platea dictumst vestibulum rhoncus est.</p>
+                            </div>
+                            <div class="project-box project2">
+                                <figure>
+                                    <img src="resources/img/florian-olivo.jpg">
+                                    <figcaption>Photo by <a href="https://unsplash.com/@florianolv?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Florian Olivo</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
+                                </figure>
+                                <h4>Project 2</h4>
+                                <p>Id donec ultrices tincidunt arcu non sodales</p>
+                            </div>
+                            <div class="project-box project3">
+                                <figure>
+                                    <img src="resources/img/hal-gatewood.jpg">
+                                    <figcaption>Photo by <a href="https://unsplash.com/@halacious?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Hal Gatewood</a> on <a href="https://unsplash.com/s/photos/website?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                                    </figcaption>
+                                </figure>
+                                <h4>Project 3</h4>
+                                <p>Ut porttitor leo a diam sollicitudin tempor id. Odio eu feugiat pretium nibh ipsum.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class='skills'>
-                    <h2 class="section-title">Skills</h2>
+                    <h2 class="section-title"><a id='skills'>Skills</a></h2>
                     <div class='skills-icons'>
                         <i class="fab fa-html5 fa-4x"></i>
                         <i class="fab fa-css3-alt fa-4x"></i>
