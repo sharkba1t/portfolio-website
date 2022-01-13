@@ -292,7 +292,12 @@ input:checked + .slider {
     justify-content: center;
     overflow: hidden;
     background-color: white;
-    font-size: 2em;
+}
+
+#default-text {
+    justify-self: center;
+    align-self: center;
+    font-size: 1.5em;
 }
 
 .project-box {
@@ -481,6 +486,7 @@ input:checked + .slider {
         grid-row-start: 3;
         grid-column: 1 / -1;
         overflow: visible;
+        font-size: 2em;
     }
 
     .tab{
